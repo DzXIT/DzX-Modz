@@ -1,0 +1,209 @@
+/* --- Variabel Warna (Inti dari Dual Mode) --- */
+:root {
+    /* LIGHT MODE DEFAULTS */
+    --color-primary: #007bff; /* Biru/Warna Aksen */
+    --color-text: #333333;
+    --color-background: #ffffff;
+    --color-card-bg: #f4f4f9;
+    --color-border: #e0e0e0;
+    --color-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* DARK MODE OVERRIDES */
+html[data-theme='dark'] {
+    --color-primary: #8ab4f8; /* Biru Muda/Aksen yang Lebih Terang */
+    --color-text: #e8e8e8;
+    --color-background: #121212;
+    --color-card-bg: #1e1e1e;
+    --color-border: #333333;
+    --color-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Global Styles --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* --- Navbar (Header) --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    border-bottom: 1px solid var(--color-border);
+    background-color: var(--color-background);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.navbar nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+    color: var(--color-primary);
+}
+
+/* --- Tombol Umum (Modern & Premium) --- */
+.cta-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-button.open-payment-btn {
+    background-color: var(--color-primary);
+    color: white;
+    margin-left: 10px;
+}
+
+.cta-button.open-payment-btn:hover {
+    background-color: #0056b3; /* Warna lebih gelap saat hover */
+    transform: translateY(-2px);
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    color: var(--color-text);
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-left: 10px;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.icon-btn:hover {
+    background-color: var(--color-card-bg);
+}
+
+/* --- Layout Konten Utama --- */
+main {
+    padding: 0 5%;
+}
+
+section {
+    padding: 60px 0;
+    margin-bottom: 20px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 15px;
+    color: var(--color-text);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    border-bottom: 2px solid var(--color-primary);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* --- Section Hero --- */
+.hero {
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Section Portofolio --- */
+.portofolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.card {
+    background-color: var(--color-card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--color-shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--color-shadow);
+}
+
+.detail-link {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* --- Section Payment Info --- */
+.payment-features {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.feature-item {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    background-color: var(--color-card-bg);
+}
+
+.feature-item i {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 15px;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 20px 5%;
+    border-top: 1px solid var(--color-border);
+    color: var(--color-text);
+    margin-top: 40px;
+    font-size: 0.9rem;
+}

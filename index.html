@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nama Anda | Open Payment & Portofolio Premium</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">Nama Kreatif Anda</div>
+        <nav>
+            <a href="#portofolio">Portofolio</a>
+            <a href="#payment-info">Info Pembayaran</a>
+            <button class="cta-button open-payment-btn" onclick="goToPayment()">Open Payment</button>
+            <button id="theme-toggle" class="icon-btn">
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Platform Pembayaran Digital & Portofolio Profesional</h1>
+            <p>Mempermudah klien memberikan apresiasi, donasi, atau melakukan pembayaran proyek dengan sistem terlengkap dan tampilan premium.</p>
+            <button class="cta-button primary" onclick="goToPayment()">Open Payment Sekarang</button>
+        </section>
+
+        <section id="portofolio" class="portofolio">
+            <h2>Portofolio Pilihan</h2>
+            <div class="portofolio-grid">
+                <div class="card">
+                    <h3>Proyek Desain Web Modern</h3>
+                    <p>Desain *clean* dengan fokus pada *user experience* dan performa tinggi.</p>
+                    <a href="#" class="detail-link">Lihat Detail</a>
+                </div>
+                <div class="card">
+                    <h3>Kampanye Digital Sukses</h3>
+                    <p>Mencapai peningkatan konversi hingga 30% dalam 2 bulan.</p>
+                    <a href="#" class="detail-link">Lihat Detail</a>
+                </div>
+                </div>
+        </section>
+
+        <section id="payment-info" class="payment-info">
+            <h2>Pilihan Pembayaran Lengkap</h2>
+            <div class="payment-features">
+                <div class="feature-item">
+                    <i class="fas fa-credit-card"></i>
+                    <h4>Transfer Bank & Virtual Account</h4>
+                    <p>BCA, Mandiri, BNI, BRI, Permata dan bank lainnya.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-qrcode"></i>
+                    <h4>E-Wallet & QRIS</h4>
+                    <p>Terima pembayaran via GoPay, OVO, Dana, ShopeePay, dan QRIS.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-store"></i>
+                    <h4>Pembayaran Retail</h4>
+                    <p>Pembayaran mudah melalui gerai minimarket terdekat.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Nama Anda. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function goToPayment() {
+            // **PENTING:** Ganti URL ini dengan link *Payment Gateway* Anda.
+            // Contoh: Link ke halaman checkout atau link generator *payment* Anda.
+            alert("Anda akan diarahkan ke halaman Open Payment. Di sini Anda akan mengintegrasikan Payment Gateway seperti Midtrans/Xendit.");
+            // window.location.href = "URL_KE_HALAMAN_OPEN_PAYMENT_ANDA";
+        }
+    </script>
+</body>
+</html>
